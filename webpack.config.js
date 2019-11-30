@@ -1,3 +1,6 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
 module.exports = {
   entry: './src/index.js',
   module: {
@@ -12,6 +15,13 @@ module.exports = {
   resolve: {
     extensions: ['*', '.js']
   },
+  plugins: [
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      title: 'Webpack Demo',
+      template: './src/index.html'
+    })
+  ],
   output: {
     path: __dirname + '/dist',
     publicPath: '/',
@@ -19,5 +29,6 @@ module.exports = {
   },
   devServer: {
     contentBase: './dist'
-  }
+  },
+  devtool: 'source-map',
 };

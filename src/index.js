@@ -1,9 +1,8 @@
-import { hello } from './testing'
+import User from './testing'
 
-const helloYou = hello()
+// const helloYou = hello()
+const greg = new User('Greg', 'Ladden')
 
 document.getElementById('testing').addEventListener('click', () => {
-  alert("testing")
-
-  console.log(helloYou)
+  return alert(`${greg.firstName} ${greg.lastName} is ${greg.userAge(2019,1985)}`)
 })
