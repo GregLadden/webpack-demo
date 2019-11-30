@@ -1,5 +1,6 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: './src/index.js',
@@ -23,12 +24,11 @@ module.exports = {
     })
   ],
   output: {
-    path: __dirname + '/dist',
+    path: path.resolve(__dirname, '../', 'dist'),
     publicPath: '/',
     filename: 'bundle.js'
   },
   devServer: {
     contentBase: './dist'
   },
-  devtool: 'source-map',
 };
