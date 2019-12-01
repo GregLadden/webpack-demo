@@ -1,0 +1,39 @@
+$body-color: gray;
+$heading-h1: rgb(43, 40, 43);
+
+body {
+  background: $body-color;
+}
+
+h1 {
+  color: $heading-h1;
+  font-size: 72px;
+}
+
+.heroImg {
+  background: url('../assets/img/Hero.jpg');
+  width: 100%;
+  height: 600px;
+}
+
+.icon img{
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+  padding: 50px;
+
+}
+
+#icon1{
+  content: url('../assets/img/Icon.png');
+}
+
+#icon2{
+  content: url('../assets/img/Ransom.png');
+}
+
+button {
+  padding: 20px;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
